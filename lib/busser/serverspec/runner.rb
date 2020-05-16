@@ -45,6 +45,8 @@ RSpec::Core::RakeTask.new(:spec) do |t|
   t.rspec_opts = [
     '--color',
     '--format documentation',
+    '--format html',
+    '--out /tmp/kitchen_report.html',
     "--default-path #{base_path}",
   ]
   t.ruby_opts = "-I#{base_path}"
